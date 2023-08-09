@@ -44,7 +44,7 @@ window.cronyWidget = function (customConfig) {
 document.onreadystatechange = function () {
   if (document.readyState === 'complete') {
     window.cronyWidget({
-      apiServer: 'http://localhost:3000',
+      apiServer: 'https://dfgwufmzbf6hq.cloudfront.net',
       token: `SqFR5uoLEUX8Qzuo66xF686q81`,
       // token: `SqFR5uoLEUX8Qzuo66xF686q${Math.floor(
       //   Math.random() * 500
