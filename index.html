@@ -9,6 +9,30 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="root">
+      <h1>Video Recorder</h1>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth="{1.5}"
+        stroke="currentColor"
+        className="w-6 h-6"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
+        />
+      </svg>
+
+      <form action="/action_page.php">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" /><br /><br />
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" /><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
   </body>
 </html>

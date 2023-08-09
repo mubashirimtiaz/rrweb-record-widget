@@ -33,7 +33,7 @@ window.cronyWidget = function (customConfig) {
 
     // recevied from agent side
     socket.on('agent-event', (data) => {
-      console.log(data);
+      console.log('agent-event', data);
     });
   });
 
@@ -41,11 +41,14 @@ window.cronyWidget = function (customConfig) {
 };
 
 // initiate crony widget on page ready
-// document.onreadystatechange = function () {
-//   if (document.readyState === 'complete') {
-//     window.cronyWidget({
-//       apiServer: 'http://localhost:3000',
-//       token: `SqFR5uoLEUX8Qzuo66xF686q${Math.floor(Math.random() * 500)}`,
-//     });
-//   }
-// };
+document.onreadystatechange = function () {
+  if (document.readyState === 'complete') {
+    window.cronyWidget({
+      apiServer: 'http://localhost:3000',
+      token: `SqFR5uoLEUX8Qzuo66xF686q81`,
+      // token: `SqFR5uoLEUX8Qzuo66xF686q${Math.floor(
+      //   Math.random() * 500
+      // ).toString()}`,
+    });
+  }
+};
