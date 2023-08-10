@@ -25,11 +25,28 @@ window.cronyWidget = function (customConfig) {
 
     rrweb.record({
       emit(event) {
-        console.log(event);
+        // you should use console.log in this way to avoid errors.
+        const defaultLog = console.log['__rrweb_original__']
+          ? console.log['__rrweb_original__']
+          : console.log;
+        defaultLog(event);
         // sent to room for agent
         socket.emit('send-event', { event: event, room: roomName });
       },
-      recordCanvas: true,
+      // recordCanvas: true,
+
+      plugins: [
+        rrweb.getRecordConsolePlugin({
+          level: ['info', 'log', 'warn', 'error'],
+          lengthThreshold: 10000,
+          stringifyOptions: {
+            stringLengthLimit: 1000,
+            numOfKeysLimit: 100,
+            depthOfLimit: 1,
+          },
+          logger: window.console,
+        }),
+      ],
     });
 
     // recevied from agent side
