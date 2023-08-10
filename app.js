@@ -38,9 +38,9 @@ window.cronyWidget = function (customConfig) {
       plugins: [
         rrweb.getRecordConsolePlugin({
           level: ['info', 'log', 'warn', 'error'],
-          lengthThreshold: 10000,
+          lengthThreshold: 100,
           stringifyOptions: {
-            stringLengthLimit: 1000,
+            stringLengthLimit: 100,
             numOfKeysLimit: 100,
             depthOfLimit: 1,
           },
