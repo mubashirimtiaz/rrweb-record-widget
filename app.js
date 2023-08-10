@@ -29,6 +29,7 @@ window.cronyWidget = function (customConfig) {
         // sent to room for agent
         socket.emit('send-event', { event: event, room: roomName });
       },
+      recordCanvas: true,
     });
 
     // recevied from agent side
@@ -41,14 +42,14 @@ window.cronyWidget = function (customConfig) {
 };
 
 // initiate crony widget on page ready
-document.onreadystatechange = function () {
-  if (document.readyState === 'complete') {
-    window.cronyWidget({
-      apiServer: 'https://dfgwufmzbf6hq.cloudfront.net',
-      token: `SqFR5uoLEUX8Qzuo66xF686q81`,
-      // token: `SqFR5uoLEUX8Qzuo66xF686q${Math.floor(
-      //   Math.random() * 500
-      // ).toString()}`,
-    });
-  }
-};
+// document.onreadystatechange = function () {
+//   if (document.readyState === 'complete') {
+//     window.cronyWidget({
+//       apiServer: 'https://b9669a9e2774.ngrok.app',
+//       token: `SqFR5uoLEUX8Qzuo66xF686q81`,
+//       // token: `SqFR5uoLEUX8Qzuo66xF686q${Math.floor(
+//       //   Math.random() * 500
+//       // ).toString()}`,
+//     });
+//   }
+// };
