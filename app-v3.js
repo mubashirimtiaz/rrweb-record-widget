@@ -36,7 +36,7 @@ window.cronyWidget = function (customConfig) {
       // recordCanvas: true,
       collectFonts: true,
       inlineImages: true,
-      recordAfter: 'DOMContentLoaded',
+      // recordAfter: 'DOMContentLoaded',
       // plugins: [
       //   rrweb.getRecordConsolePlugin({
       //     level: ['info', 'log', 'warn', 'error'],
